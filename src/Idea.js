@@ -18,26 +18,7 @@ class Idea {
       IdeaForm.ideaModalHandler(addBtn)
     }
   
-    static randomIdeasBtn() {
-      const btnDiv = document.createElement('span')
-      btnDiv.className = 'ml-3'
-      btnDiv.style.display = 'inline-block'
-      const addBtn = document.createElement('button')
-      addBtn.className = 'btn'
-      addBtn.id = 'random-idea-btn'
-      addBtn.innerText = "Random Idea"
-      btnDiv.appendChild(addBtn)
-      btnsDiv.appendChild(btnDiv)
-      app.appendChild(btnsDiv)
-      addBtn.addEventListener("click", () => {
-        ApiService.postIdea()
-        .then(idea => {
-          if(idea.errors){
-            alert(idea.errors)
-          } else {
-          new Idea(idea)}})
-          })
-    }
+ 
   
     createCard(){
       const card = document.createElement('div')
@@ -103,14 +84,14 @@ class Idea {
       ideaContainer.appendChild(cardFooterDiv)
   
       const editIdeaForm = document.createElement('form')
-      IdeaForm.ideaEditHandler(editBtn, editIdeaForm, name, likes, this.idea.thinkers)
+      IdeaForm.ideaEditHandler(editBtn, editIdeaForm, quote, likes, this.idea.thinkers)
       editIdeaForm.addEventListener("submit", (e) => {
         e.preventDefault();
         const checks = Array.from(e.target.querySelectorAll(".checks"))
         const checkedThinkers = checks.filter( thinker => thinker.checked )
         let thinkerIdsArray = checkedThinkers.map( thinker => parseInt(thinker.id))
         const editedIdea = {
-          name: e.target.quote.value,
+          quote: e.target.quote.value,
           likes: e.target.likes.value,
           thinker_ids: thinkerIdsArray
         }

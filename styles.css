@@ -40,7 +40,7 @@ body {
   }
   
   .nav-link:hover {
-    color: #31708e;
+    color: #8aeaff;
   }
   
   .nav-tabs .nav-link.active {
@@ -66,7 +66,7 @@ body {
   }
   
   .btn {
-    background-color: #060707;
+    background-color: #000000;
     color: #F7F9FB;
   }
   
