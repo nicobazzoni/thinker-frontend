@@ -20,8 +20,8 @@ class Thinker {
       <label class="ml-2 mr-1"for="filter">Filter By:</label>
       <select class='form-control' name="filter" id="filter">
         <option value="all">All</option>
-        <option value="1">Positive</option>
-        <option value="2">negative</option>
+        <option value="1">Negative</option>
+        <option value="2">Positive</option>
         <option value="3">Neutral</option>
       
       </select>
