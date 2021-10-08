@@ -25,12 +25,12 @@ class Idea {
       card.className = "card text-center "
       card.dataset.id = this.idea.id
       card.id = 'idea-card'
-      this.cardContent(card)
+      this.cardElements(card)
       app.appendChild(card)
       return card
     }
   
-    cardContent(card) {
+    cardElements(card) {
       const {quote, likes} = this.idea
   
       const ideaQuote = document.createElement('h3')
@@ -123,7 +123,7 @@ class Idea {
         } else {
           this.idea = updatedIdea
           card.innerHTML = ""
-          this.cardContent(card)
+          this.cardElements(card)
           modal.style.display = "none"
           modal.querySelector("form").remove()
         }
@@ -136,7 +136,7 @@ class Idea {
       .then(updateIdea => {
         this.idea = updateIdea
         this.card.innerHTML = ""
-        this.cardContent(this.card)
+        this.cardElements(this.card)
       })
     }
   

@@ -11,7 +11,7 @@ class IdeaForm {
       const ideaForm = document.createElement('form')
       modalContent.innerHTML = ""
       modalContent.append(ideaForm)
-      IdeaForm.renderFormContent(ideaForm)
+      IdeaForm.renderElements(ideaForm)
       ideaForm.addEventListener('submit', IdeaForm.handleFormSubmit)
     }
   
@@ -45,11 +45,11 @@ class IdeaForm {
       editBtn.addEventListener("click", () => {
         modal.style.display = "block"
         modalContent.append(editIdeaForm)
-        IdeaForm.renderFormContent(editIdeaForm, quote, likes, thinkers)
+        IdeaForm.renderElements(editIdeaForm, quote, likes, thinkers)
       })
     }
   
-    static renderFormContent(editIdeaForm, quote, likes, selectedThinkers, ideaForm){
+    static renderElements(editIdeaForm, quote, likes, selectedThinkers, ideaForm){
       const ideaQuoteDiv = document.createElement('div')
       ideaQuoteDiv.className = 'form-group'
       const ideaQuoteLabel = document.createElement('label')

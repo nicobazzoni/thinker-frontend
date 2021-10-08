@@ -13,8 +13,8 @@ body {
   } */
   
   #header {
-    font-family: 'sans-serif', cursive;
-    color: #8fc1e3;
+    font-family: "Gill Sans Extrabold", sans-serif;
+    color: #242222;
   }
   
   .info-div {
@@ -29,7 +29,7 @@ body {
   }
   
   .nav-thinker {
-    background-color: #8fc1e3;
+    background-color: #e8e8e8;
     color: #F7F9FB;
     border-top-left-radius: .5rem;
     border-top-right-radius: .5rem;
@@ -66,13 +66,21 @@ body {
   }
   
   .btn {
-    background-color: #000000;
-    color: #F7F9FB;
+      background-color: #000000; /* Green */
+  border: none;
+  color: rgb(255, 0, 247);
+  padding: 15px 32px;
+  text-align: center;
+  font-family:  var(--header-font-family);
+  display: inline-block;
+  font-size: 15px;
+  border: solid 1px #545454; 
   }
   
   #thinker-add-btn {
     margin-left: 2.5rem;
   }
+  
   
   #sort-form {
     float: right;
@@ -116,6 +124,7 @@ body {
     background-color: transparent;
     float: right;
     margin-bottom: .5rem;
+    border: none 
   }
   
   #add-idea-btn {
@@ -126,6 +135,7 @@ body {
     background-color: transparent;
     float: right;
     margin-bottom: .5rem;
+    border: none
   }
   
   #idea-card { 

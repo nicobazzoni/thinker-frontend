@@ -5,7 +5,7 @@ class Thinker {
       this.card = this.createCard()
     }
   
-    static sortAndFilter(){
+    static filterThinker(){
       const sortForm = document.createElement('form')
       sortForm.id = 'sort-form'
       sortForm.className = 'form-inline'
@@ -51,13 +51,13 @@ class Thinker {
       const card = document.createElement('div')
       card.className = "card text-center"
       card.dataset.id = this.thinker.id
-      this.cardContent(card)
+      this.cardElements(card)
       thinkerCollection.appendChild(card)
       app.appendChild(thinkerCollection)
       return card
     }
   
-    cardContent(card) {
+    cardElements(card) {
       const {name, image,  times_studied} = this.thinker
      
       const thinkerCategory = document.createElement('h4')
@@ -77,13 +77,13 @@ class Thinker {
     
       const thinkerTimesStudied = document.createElement('p')
       thinkerTimesStudied.id = 'times-Studied'
-      thinkerTimesStudied.innerText = `Studied ${times_studied} times. +`
+      thinkerTimesStudied.innerText = `Studied ${times_studied} times. `
       thinkerTimesStudied.addEventListener("click", () => {
         ApiService.increaseTimesStudied(this.thinker.id)
           .then(updatedThinker => {
             this.thinker = updatedThinker
             card.innerHTML = ""
-            this.cardContent(card)
+            this.cardElements(card)
           })
           .catch(error => alert(error))
       })
@@ -132,7 +132,7 @@ class Thinker {
         } else {
           this.thinker = updatedThinker
           card.innerHTML = ""
-          this.cardContent(card)
+          this.cardElements(card)
           modal.style.display = "none"
           modal.querySelector("form").remove()
         }
