@@ -114,6 +114,8 @@ class Thinker {
       infoDiv.append( thinkerTimesStudied, editBtn)
       thinkerCategory.appendChild(deleteBtn)
       card.append(thinkerCategory, infoDiv, thinkerImg)
+      
+      
     }
   
     thinkerDeleteHandler(deleteBtn, card) {

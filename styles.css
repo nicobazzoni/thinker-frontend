@@ -29,23 +29,23 @@ body {
   }
   
   .nav-thinker {
-    background-color: #e8e8e8;
+    background-color: #00b9fc;
     color: #F7F9FB;
     border-top-left-radius: .5rem;
     border-top-right-radius: .5rem;
   }
   
   .nav-link {
-    color: #F7F9FB;
+    color: #007ffe;
   }
   
   .nav-link:hover {
-    color: #8aeaff;
+    color: #fafeff;
   }
   
   .nav-tabs .nav-link.active {
     color: #F7F9FB;
-    background-color: #31708e;
+    background-color: #6fccf7;
     border-color: #dee2e6 #dee2e6 #fff;
   }
   
@@ -74,17 +74,19 @@ body {
   font-family:  var(--header-font-family);
   display: inline-block;
   font-size: 15px;
-  border: solid 1px #545454; 
+  border: solid 1px #00e1ff; 
   }
   
   #thinker-add-btn {
     margin-left: 2.5rem;
+    border: solid 5px #f900a6; 
   }
   
   
   #sort-form {
     float: right;
     margin-right: 3rem;
+    border: solid 1px #00bbff; 
   }
   
   .card {
@@ -129,6 +131,7 @@ body {
   
   #add-idea-btn {
     margin-left: 2.5rem;
+     border: solid 5px #f900a6; 
   }
   
   #idea-delete-btn {
@@ -188,7 +191,7 @@ body {
   }
   
   .popover-body {
-    background-color: #43b5fc;
+    background-color: #0e1011;
     color: #f7f9fb;
     font-size: large;
   }
@@ -211,10 +214,10 @@ body {
   
   /* Modal Content */
   .modal-content {
-    background-color: #8FC1E3;
+    background-color: #000000;
     margin: auto;
     padding: 20px;
-    border: 1px solid rgb(254, 254, 254);
+    border: 3px solid rgb(242, 52, 252);
     width: 50%;
     display: block;
     text-align: center;

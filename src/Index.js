@@ -68,14 +68,14 @@ function getIdeas(){
   .catch(error => alert(error))
 }
 
-// Get the <span> element that closes the modal
+// <span>  closes modal
 let span = document.getElementsByClassName("close")[0];
 
-// When the user clicks on <span> (x), close the modal
+// clicks  <span> (x) close  modal
 span.onclick = function() {
   modal.style.display = "none";
   modal.querySelector("form").remove()
-  // modal.querySelector("edit-item-form").remove()
+  
 }
 
 // When the user clicks anywhere outside of the modal, close it
@@ -83,6 +83,15 @@ window.onclick = function(event) {
   if (event.target == modal) {
     modal.style.display = "none";
     modal.querySelector("form").remove()
-    // modal.querySelector("edit-item-form").remove()
+    
   }
+  let sketch = function(p) {
+    p.setup = function(){
+      p.createCanvas(100, 100);
+      p.background(0);
+    }
+  };
+  let node = document.createElement('div');
+  window.document.getElementsByTagName('body')[0].appendChild(node);
+  new p5(sketch, node);
 }
