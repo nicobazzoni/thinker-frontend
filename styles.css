@@ -90,7 +90,7 @@ body {
   }
   
   .card {
-    border: rgb(0, 0, 0) solid 1px;
+    border: rgb(255, 255, 255) solid 1px;
     border-radius: 5px; 
     padding: 1rem;
     width: 32rem;
@@ -102,7 +102,7 @@ body {
   }
   
   #card-header {
-    font-family: 'Georgia, serif;', cursive;
+    font-family: "Gill Sans Extrabold", sans-serif;
   }
   
   .card-img{
@@ -144,7 +144,7 @@ body {
   #idea-card { 
     display: inline-grid;
     width: 22rem; 
-    height: 20rem; 
+    height: 30rem; 
     background-color:#e2f6fa;
     float: none; 
     margin: 2rem; 
@@ -177,6 +177,13 @@ body {
   
   #idea-edit-btn {
     float: left;
+    padding: 5px 10px;
+  }
+  #edit-btn {
+    position: absolute;
+    left:    0;
+     bottom:   0;
+    padding: 5px 10px;
   }
   
   #idea-likes{ 

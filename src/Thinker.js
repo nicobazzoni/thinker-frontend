@@ -11,7 +11,7 @@ class Thinker {
       sortForm.className = 'form-inline'
       sortForm.innerHTML = ` 
       <div class="form-group">
-      <label class="ml-2 mr-1"for="sort">Sort By:</label>
+      <label class="ml-5 mr-0"for="sort">Sort By:</label>
       <select class='form-control' name="sort" id="sort">
         <option value="alphabetical">Alphabetical</option>
         <option value="times_studied">Times Studied</option>
@@ -58,12 +58,12 @@ class Thinker {
     }
   
     cardElements(card) {
-      const {name, image,  times_studied} = this.thinker
+      const {name, image,times_studied} = this.thinker
      
       const thinkerCategory = document.createElement('h4')
       thinkerCategory.className = 'h4 card-header'
       thinkerCategory.id = 'card-header'
-      thinkerCategory.innerText = `${this.thinker.category.name} - ${name}`
+      thinkerCategory.innerText = `${name} - ${this.thinker.category.name} `
       
       const thinkerImg = document.createElement('img')
       thinkerImg.className = 'card-img float-right'
@@ -72,8 +72,6 @@ class Thinker {
      
       const infoDiv = document.createElement('div')
       infoDiv.id = 'info-div'
-    
-      
     
       const thinkerTimesStudied = document.createElement('p')
       thinkerTimesStudied.id = 'times-Studied'
@@ -93,7 +91,7 @@ class Thinker {
       editBtn.id = 'edit-btn'
       editBtn.innerText = `Edit`
       const editThinkerForm = document.createElement('form')
-      ThinkerForm.ThinkerEditHandler(editBtn, editThinkerForm, name, image,   times_studied, this.thinker.category.name)
+      ThinkerForm.ThinkerEditHandler(editBtn, editThinkerForm, name, image, times_studied, this.thinker.category.name)
       editThinkerForm.addEventListener("submit", (e) => {
         e.preventDefault();
         const editedThinker = {
@@ -114,8 +112,6 @@ class Thinker {
       infoDiv.append( thinkerTimesStudied, editBtn)
       thinkerCategory.appendChild(deleteBtn)
       card.append(thinkerCategory, infoDiv, thinkerImg)
-      
-      
     }
   
     thinkerDeleteHandler(deleteBtn, card) {
