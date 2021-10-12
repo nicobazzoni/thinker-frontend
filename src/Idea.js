@@ -55,11 +55,9 @@ class Idea {
       this.idea.thinkers.forEach(thinker => {
         const thinkerImgDiv = document.createElement('div')
         thinkerImgDiv.className = 'thinker-idea-div'
-        thinkerImgDiv.innerHTML = `<img src=${thinker.image} class='thinker-idea-image' 
-        alt='${thinker.name}: ${thinker.times_studied}'' data-toggle="popover" tabindex="50" 
-        data-animation="true" data-html="true" data-trigger="focus" 
-        title="Thinker Details" data-content="<p><b>Name:</b></p> <p>${thinker.name}</p> 
-        <p><b>Times Studied:</b></p> <p>${thinker.times_studied}</p>"></img>`
+        thinkerImgDiv.innerHTML = `
+        <p>${thinker.name}</p> 
+       `
         $(function () {
           $('[data-toggle="popover"]').popover()
         })

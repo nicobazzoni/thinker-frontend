@@ -27,7 +27,7 @@ class Home {
       <div class="tab-content">
           <div class="tab-pane fade show active" id="home">
               <h4 class="mt-2">Using thinker</h4>
-              <p> match a thinker with an idea, evolve your understanding of concepts</p>
+              <p> match a thinker with an idea, evolve your understanding of concepts.</p>
               </div>`
     $(document).ready(function(){ 
       $("#info-tab a").click(function(e){
